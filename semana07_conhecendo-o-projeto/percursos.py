@@ -35,7 +35,6 @@ class Waze:
 
     def gerar_percurso(self, celula):
         """ Gera um percurso no labirinto a partir de uma determinada célula """
-        lab = self.labirinto # Para melhorar a legibilidade
         visitadas = [] # Indica quais células já foram visitadas
         # lst_coord: indica as coordenadas que o agente deve seguir para
         #            percorrer todo o labirinto

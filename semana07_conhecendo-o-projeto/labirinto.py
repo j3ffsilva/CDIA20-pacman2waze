@@ -12,8 +12,8 @@ class Labirinto:
 
     def __init__(self, dim, tam_celula):
         """ Construtor do Labirinto """
-        #self._matriz = self.ler_matriz_fixa() # Carrega uma matriz fixa
-        self._matriz = self.ler_matriz_aleatoria(dim) # Carrega uma matriz aleatória
+        self._matriz = self.ler_matriz_fixa() # Carrega uma matriz fixa
+        #self._matriz = self.ler_matriz_aleatoria(dim) # Carrega uma matriz aleatória
         self._dim = dim # Atributo que armazena a dimensão da matriz
         self._tam_celula = tam_celula # Atributo que armazena o tamanho da célula
 
@@ -65,7 +65,7 @@ class Labirinto:
             # Para cada coluna da matriz
             for col in range(self._dim):
                 # Testa se a coordenada da matriz (lin, col) é caminho (=1)
-                if (self._matriz[lin][col] == 1):
+                if (self.eh_caminho(lin,col)):
                     # Em caso positivo, transforma em coordenada Turtle.
                     # Atenção: Numa coordenada Turtle (x,y), o eixo x refere-se à coluna e o eixo y à linha
                     # Numa coordenada da matriz (lin, col), o primeiro elemento é a linha e o segundo a coluna
@@ -83,8 +83,7 @@ class Labirinto:
         while (not self.eh_caminho(i, j)):
             i, j = np.random.randint(self._dim, size=(2))
 
-        celula = self.criar_celula(coord_matr=(i,j))
-        return celula
+        return self.criar_celula(coord_matr=(i,j))
 
     def desenhar_pastilha(self, celula, cor):
         """ Leva a tartaruga até a posição (x,y) e desenha por exemplo um círculo
