@@ -44,12 +44,12 @@ def um_agente_vagueia():
     dimensao_da_matriz = 20
     lab = Labirinto(dimensao_da_matriz)
     id = 0
-    agente = lab.add_pacman(id)
+    pacman = lab.add_pacman(id)
 
     n_frames = 500
     intervalo_entre_frames = 0.1
     for _ in range(n_frames):
-        agente.vaguear()
+        pacman.vaguear()
         update()
         sleep(intervalo_entre_frames)
 

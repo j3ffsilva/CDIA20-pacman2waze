@@ -43,6 +43,7 @@ class Matriz:
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
     def carregar_de(self, nome_arquivo):
+        # REQ
         return [[]]
 
     def tracar_rota_manhattan(self, origem, destino):

@@ -22,15 +22,21 @@ class Agente:
 
         # define a cor do agente
         self._cor = cor
-        # é um gerador de percursos
-        self._waze = None
-
-        # add os seguintes comandos
-        self.direcao = vector(1,0) # este vector significa direita
-
         # REQ
         # deve definir a cor do agente aleatoriamente (verde, vermelho, rosa, laranja e marrom)
         # se não for passado no construtor
+        # é um gerador de percursos
+
+        self._waze = None
+
+        # add os seguintes comandos
+        # TODO: Conferir estas direções
+        # vector(1, 0) => direita
+        # vector(-1, 0) => esquerda
+        # vector(0, 1) => cima
+        # vector(0, -1) => baixo
+        self.direcao = vector(1,0) # este vector significa direita
+
 
     # adiciona um labirinto
     def add_labirinto(self, lab):
@@ -91,11 +97,11 @@ class Agente:
         prox_pos_agente = None
         # REQ
         # Deve verificar:
-        # Se der o passo, continua sendo caminho
+        # Se der o passo, continua sendo caminho (lab.eh_caminho())
 
         # REQ
         # Deve verificar:
-        # Se der o passo, a posição estará ocupada?
+        # Se der o passo, a posição estará ocupada? (lab.eh_celula_ocupada())
 
         # REQ
         # Definir qual é a próxima posição do agente
@@ -119,4 +125,5 @@ class Agente:
 
     def mudar_direcao_aleatoriamente(self):
         """ Escolhe alguma direção aleatoriamente que não seja a atual """
+        # REQ implementar o método
         pass
