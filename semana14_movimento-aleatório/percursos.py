@@ -47,7 +47,7 @@ class Waze:
         self.__dfs(celula, visitadas, lst_coord)
 
         #self.lst_coord = lst_coord
-        self.lst_coord = visitadas
+        self.lst_coord = lst_coord
 
         # Logo após ter gerado o percurso, o agente ainda não o percorreu.
         # Por esta razão, este atributo é inicializado como False

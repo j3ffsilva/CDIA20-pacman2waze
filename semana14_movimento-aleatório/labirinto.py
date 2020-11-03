@@ -37,8 +37,8 @@ class Labirinto:
 
     def criar_matriz(self, dimensao):
         """ Cria uma matriz """
-        #self._matriz = Matriz().aleatoria(dimensao)
-        self._matriz = Matriz().ler_fixa()
+        self._matriz = Matriz().aleatoria(dimensao)
+        #self._matriz = Matriz().ler_fixa()
 
     def criar_tela(self, p1=420, p2=420, p3=370, p4=0):
         """ Cria uma tela do Turtle """
@@ -140,7 +140,7 @@ class Labirinto:
 
     def add_pacman(self, id):
         """ Adiciona o pacman ao labirinto """
-        tam_agente = 20
+        tam_agente = self._tam_celula
         pacman = Agente(id, tam_agente, 'yellow')
         pacman.add_labirinto(self)
         self.agentes[id] = pacman

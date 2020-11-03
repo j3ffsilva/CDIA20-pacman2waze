@@ -8,7 +8,7 @@ from time import sleep
 
 def main():
     # Simulação 1
-    #um_agente_percorre_tudo()
+    um_agente_percorre_tudo()
 
     # Simulação 2
     #um_agente_vagueia()
